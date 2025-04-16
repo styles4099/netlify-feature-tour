@@ -1,0 +1,70 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="text-center py-20 px-6 bg-gradient-to-b from-black via-zinc-900 to-zinc-800">
+        <h1 className="text-5xl font-bold mb-4">Flash Frequency Productions</h1>
+        <p className="text-xl mb-6">The Sound of Depth. The Pulse of Innovation.</p>
+        <p className="text-lg text-zinc-400 mb-8">Deep House music with soul, substance, and vision — crafted by Malcolm Lewis.</p>
+        <div className="flex justify-center gap-4">
+          <Button className="bg-white text-black">🎵 Listen Now</Button>
+          <Button variant="outline">📧 Join the Frequency</Button>
+        </div>
+      </section>
+
+      {/* Frequency Section */}
+      <section className="text-center py-16 px-6">
+        <h2 className="text-3xl font-semibold mb-4">The Frequency of the Future</h2>
+        <p className="max-w-3xl mx-auto text-zinc-400 text-lg">
+          Flash Frequency Productions is more than a label — it's a movement. Founded by South African DJ, producer, and storyteller Malcolm Lewis, we are a creative hub for Deep House music that’s immersive, emotional, and forward-thinking. Each release is an experience — blending hypnotic grooves, jazzy undertones, Afro-minimal textures, and purposeful sound design.
+        </p>
+      </section>
+
+      {/* Mission Section */}
+      <section className="bg-zinc-900 py-16 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+        <p className="max-w-2xl mx-auto text-zinc-400 text-lg">
+          To produce, promote, and preserve Deep House that challenges norms, inspires movement, and builds community.
+        </p>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="py-16 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-4">What We Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+          {[
+            "Original Releases by Malcolm Lewis",
+            "Curated EPs, Albums & Singles",
+            "Live DJ Sets & Performances",
+            "Workshops & Community Upliftment",
+            "Visual Art & Storytelling"
+          ].map((item, index) => (
+            <Card key={index} className="bg-zinc-800 text-white">
+              <CardContent className="p-4 text-lg">{item}</CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Email Subscription */}
+      <section className="bg-zinc-900 py-16 px-6 text-center">
+        <h2 className="text-3xl font-semibold mb-4">Be Part of the Frequency</h2>
+        <p className="text-zinc-400 mb-6">Join our community of listeners, artists, and dreamers. Get early access to music, events, and more.</p>
+        <div className="flex flex-col md:flex-row justify-center gap-4 max-w-md mx-auto">
+          <Input placeholder="Your Name" className="bg-white text-black" />
+          <Input placeholder="Your Email" className="bg-white text-black" />
+          <Button className="bg-white text-black">✅ Subscribe</Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-zinc-500 text-sm">
+        © 2025 Flash Frequency Productions. Made with ❤️ + groove in South Africa.
+      </footer>
+    </div>
+  );
+}
